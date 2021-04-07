@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <link th:href="@{/main.css}" rel="stylesheet" />
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h2>Result</h2>
+    <p th:text="'id: ' + ${greeting.id}" />
+    <p th:text="'content: ' + ${greeting.content}" />
+    <a href="/studs">Submit another message</a>
+</body>
+</html>

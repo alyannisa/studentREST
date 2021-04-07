@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <link th:href="@{/main.css}" rel="stylesheet" />
+    <title>All Data Student</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div th:switch="${studs}">
+    <h2 th:case="null">No Students yet!</h2>
+        <div th:case="*">
+            <h2>Students</h2>
+	<div class = mytable>
+            <table class="table table-striped table-primary">
+                <thead>
+                    <tr>
+			<th>ID</th>
+                        <th>Nama</th>
+                        <th>Alamat</th>
+                        <th>No Telepon</th>
+                        <th>Tanggal Lahir</th>
+			<th colspan="2">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr th:each="stud : ${studs}">
+		    <td th:text="${stud.id}"></td>
+                    <td th:text="${stud.nama}"></td>
+                    <td th:text="${stud.alamat}"></td>
+		    <td th:text="${stud.no_telepon}"></td>
+		    <td th:text="${stud.tanggal_lahir}"></td>
+		    <td><a th:href="@{/edit/{id}(id=${stud.id})}">Edit</a></td>
+                    <td><a th:href="@{/delete/{id}(id=${stud.id})}"><i class="fa fa-trash-o"></i>Delete</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>     
+    <p><a href="/studs" class="button">Add a new user</a></p>
+</div>
+</body>
+</html>

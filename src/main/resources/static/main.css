@@ -1,0 +1,81 @@
+h2 {
+    font-family: sans-serif;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: green;
+    justify-content: center;
+    display: flex;
+}
+
+strong {
+    font-weight: 700;
+    background-color: yellow;
+}
+
+p {
+    font-family: sans-serif;
+}
+
+.mytable {
+ 	margin: auto;
+  	width: 1020px;
+  	padding: 10px;
+	justify-content: center;
+    	display: flex; 
+}
+
+.mytable td, .mytable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.mytable tr:nth-child(even){background-color: #f2f2f2;}
+
+.mytable tr:hover {background-color: #ddd;}
+
+.mytable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+form {
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+	text-align: center;
+}
+
+a.button {
+	border-radius: 20px;
+	background-color: green;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+}
+
+a.button:active {
+	transform: scale(0.95);
+}
+
+a.button:focus {
+	outline: none;
+}
+
+a.button.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+}

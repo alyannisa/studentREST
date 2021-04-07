@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head> 
+    <link th:href="@{/main.css}" rel="stylesheet" />
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h2>Update Students Form</h2>
+    <form action="#" th:action="@{/update/{id} (id=${studs.id}) }" th:object="${studs}" method="post">
+        <p>Nama: <input type="text" th:field="*{nama}" /></p>
+	<p>Alamat: <input type="text" th:field="*{alamat}" /></p>
+	<p>No. Telepon: <input type="text" th:field="*{no_telepon}" /></p>
+	<p>Tanggal Lahir: <input type="date" data-date="" data-date-format="DD MMMM YYYY" th:field="*{tanggal_lahir}" /></p>
+	<p><input type="submit" value="Update" /> <input type="reset" value="Reset" /></p>
+    </form>
+</body>
+</html>
